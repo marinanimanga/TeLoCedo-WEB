@@ -1,0 +1,90 @@
+body, html {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 0;}
+  
+  section {
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  #login h2 {
+    display: inline-block;
+    margin-right: auto;
+  }
+  
+  #login p {
+    text-align: center;
+    margin-top: 15px; 
+    font-size: 20px; 
+    color: #000000; 
+  }
+    
+  #loginForm button {
+    margin-left: 4px;
+  }
+  
+  input[type="text"],
+  button[type="submit"] {
+    display: flex;
+    margin: 10px auto;
+    width: 300px;
+    height: 50px; 
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input[type="file"]{
+    display: flex;
+    margin: 10px auto;
+    font-size: 16px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  
+  #archivo {
+    margin-top: 20px;
+  }
+  
+  button[type="submit"] {
+    cursor: pointer;
+  }
+  
+  /* Añade media query para dispositivos más pequeños */
+  @media screen and (max-width: 600px) {
+    section {
+      margin: 10px;
+    }
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+}
+
+  
+  .nav-main {
+    font-size: 15px;
+    display: flex; /* Hace que los elementos dentro del nav se comporten como flex items */
+    /*Decir que van a usar todo el espacio disponible en horizontal*/
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente los elementos */
+
+  }
+  
+  /*Navegacion izquierda*/
+  .nav-main ul {
+    display: flex;
+    margin-left: 0;
+  }
+
+  .nav-main ul li {
+    list-style: none;
+    padding: 10px;
+  }
+
+  .nav-main ul li a:hover{
+    border-bottom: 2px solid #000000;
+  }
+  

@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; 
+    padding: 0; 
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+  
+  .nav-main {
+    font-size: 15px;
+    display: flex; /* Hace que los elementos dentro del nav se comporten como flex items */
+    /*Decir que van a usar todo el espacio disponible en horizontal*/
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente los elementos */
+
+  }
+  
+  /*Navegacion izquierda*/
+  .nav-main ul {
+    display: flex;
+    margin-left: 0;
+  }
+
+  .nav-main ul li {
+    list-style: none;
+    padding: 10px;
+  }
+
+  .nav-main ul li a:hover{
+    border-bottom: 2px solid #000000;
+  }
+  
+h1 {
+    margin-bottom: 20px; 
+}
+
+#terms {
+    max-width: 800px; 
+    margin: 0 auto; 
+    text-align: left; 
+}
+
+#terms h2, #terms h3, #terms h4, #terms p {
+    margin-bottom: 10px; 
+}
+
+#terms ul {
+    padding-left: 20px; 
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px; 
+    font-size: 18px; 
+}

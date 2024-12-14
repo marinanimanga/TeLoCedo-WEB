@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center; 
+  padding: 0; 
+  margin: 0;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav-main {
+  font-size: 15px;
+  display: flex; /* Hace que los elementos dentro del nav se comporten como flex items */
+  justify-content: space-between;
+  align-items: center; /* Centra verticalmente los elementos */
+  padding: 10px 20px;
+}
+
+/* Navegacion izquierda */
+.nav-main ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-main ul li {
+  list-style: none;
+  padding: 10px;
+}
+
+.nav-main ul li a:hover {
+  border-bottom: 2px solid #000000;
+}
+
+h4 {
+  margin-left: 30px;
+  text-align: left;
+}
+
+form {
+  margin-left: 30px;
+  text-align: left;
+}
+
+#categoria {
+  display: inline-block;
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #555555;
+  border-radius: 5px;
+  cursor: pointer;
+  appearance: none; /* Oculta el estilo nativo del selector en algunos navegadores */
+  background-color: #fff; /* Color de fondo */
+  color: #000; /* Color del texto */
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#categoria:hover,
+#categoria:focus {
+  border-color: #000; /* Cambia el color del borde al pasar el ratón o enfocarse */
+}
+
+
+.boton-accion, #subirLibro, #serAutor {
+  width: 100px;
+  height: 40px;
+  margin: 10px 0;
+  padding: 5px 10px;
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+.busqueda {
+  margin-left: 30px;
+  text-align: left;
+}
+
+#buscarLibro input {
+  display: inline-block;
+  width: 95%;
+  margin:10px auto;
+  padding: 10px;
+}
+
+#buscar, #subirLibro, #serAutor {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#tabla-resultados {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+}
+
+#tabla-resultados th, #tabla-resultados td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+#tabla-resultados th {
+  background-color: #f2f2f2;
+}
+
+.detalle-btn {
+  background-color: #f2f2f2; /* Color de fondo */
+  color: black; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 8px 16px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Hace que los botones estén uno al lado del otro */
+  font-size: 14px; /* Tamaño de fuente */
+  margin: 4px 2px; /* Margen exterior */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  transition-duration: 0.4s; /* Duración de la transición al pasar el ratón */
+}
+
+.detalle-btn:hover {
+  background-color: #f2f2f2; /* Cambia el color de fondo al pasar el ratón */
+  color: white; /* Cambia el color del texto al pasar el ratón */
+}
+
+
