@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalles del Libro</title>
+    <link rel="stylesheet" type="text/css" href="../css/detallesLibro.css">
+</head>
+<body>
+    <h1>Detalles del Libro</h1>
+    <div id="detalle-libro">
+        <h2 id="titulo"></h2>
+        <p id="descripcion"></p>
+        <p id="notas"></p>
+    </div>
+    <button onclick="leer()">Leer</button>
+
+    <script>
+        // Obtener el ID del libro de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const libroId = urlParams.get('id');
+
+        // Función para obtener los detalles del libro desde la base de datos
+        async function obtenerDetallesLibro(id) {
+            try {
+                const response = await fetch(`libro/${id}`); // Cambia esta URL a la de tu servidor
+                if (!response.ok) {
+                    throw new Error('Error en la solicitud');
+                }
+                const libro = await response.json();
+
+                // Mostrar la información del libro en la página
+                document.getElementById('titulo').textContent = libro.titulo;
+                document.getElementById('descripcion').textContent = libro.descripcion;
+                document.getElementById('notas').textContent = libro.notas;
+            } catch (error) {
+                console.error('Error al obtener los detalles del libro:', error);
+                document.getElementById('detalleLibro').innerHTML = '<p>Libro no encontrado</p>';
+            }
+        }
+
+        // Llamar a la función para obtener los detalles del libro
+        obtenerDetallesLibro(libroId);
+
+        //Funcion para obtener los detalles del libro
+        async function leer() {
+    try {
+        const response = await fetch(`libro/contenido/${libroId}`); // Se ajusta la URL para obtener solo el contenido del libro
+        if (!response.ok) {
+            throw new Error('Error en la solicitud');
+        }
+        const textoLibro = await response.text(); // Se obtiene el texto directamente
+        document.getElementById('detalle-libro').innerHTML = `<pre>${textoLibro}</pre>`;
+    } catch (error) {
+        console.error('Error al obtener el contenido del libro:', error);
+        alert('Error al obtener el contenido del libro');
+    }
+}
+
+    </script>
+</body>
+</html>

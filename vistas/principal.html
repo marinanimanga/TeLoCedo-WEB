@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/principal.css">
+</head>
+<body>
+    <div class="container">
+		<nav class="nav-main">
+			<ul class="nav-menu">
+				<li>
+					<a href="principal.html">TLoCdo</a>
+				</li>
+			</ul>
+			<ul class="nav-sesion">
+				<li>
+					<a href="login.html">Cerar Sesión</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+	<hr>
+	<h4>¿Quieres ser autor? Haz click aquí: </h4>
+	<form action="terminos.html">
+        <input id="serAutor" type="submit" value="Sí quiero" />
+    </form></br>
+	<h4>Haz click aquí para subir un libro</h4>
+    <form action="subirLibro.html">
+        <input id="subirLibro" type="submit" value="Subir" />
+    </form>
+
+	<hr>
+
+	<nav class="busqueda">
+		<h4>Búsqueda avanzada</h4>
+		<form id="buscarLibro">
+  			<input type="text" id="titulo" name="titulo" placeholder="Título"><br>
+  			<input type="text" id="nombreAutor" name="nombreAutor" placeholder="Nombre del autor"><br>
+  			<input type="text" id="apellidos" name="apellidos" placeholder="Apellidos"><br>
+  			<select id="categoria" name="categoria" placeholder="Categoría"><br>
+				<option value="">Seleccione una categoría</option>
+			</select><br>
+			<button id="buscar" type="submit">Buscar</button>
+		</form>
+	</nav>
+
+	
+
+	<hr>
+
+	<table id="tabla-resultados">
+		<thead>
+			<tr>
+				<th>Título</th>
+				<th>Autor</th>
+				<th>apellidos</th>
+				<th>categoría</th>
+				<th>Botón</th> <!-- Nueva columna para los botones -->
+			</tr>
+		</thead>
+		<tbody>
+			<!-- Los datos se insertarán aquí -->
+		</tbody>
+	</table>
+    <script src="../src/principal.js"></script>
+</body>
+</html>
